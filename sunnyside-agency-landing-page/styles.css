@@ -1,0 +1,393 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    background-color: hsl(0, 0%, 100%);
+}
+
+header {
+    position: relative;
+    background-color: #3DBEFF;
+}
+
+.header-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.header-text {
+    font-family: 'Fraunces', serif;
+}
+
+.image-text-container {
+    position: absolute;
+}
+
+/* Navigation menu component */
+.navigation {
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    padding: 0 16px;
+    text-align: center;
+    gap: 64px;
+}
+
+.navigation-menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navigation-menu a:link, 
+.navigation-menu a:visited,
+.navigation-menu a:active,
+.navigation-menu a:hover {
+    display: block;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+.navigation-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: space-around;
+}
+
+.navigation-contact {
+    padding: 12px 24px;
+    border-radius: 100px;
+    background-color: hsl(51, 100%, 49%);
+}
+
+.arrow-down-icon {
+    width: 36px;
+    height: 114px;
+}
+
+
+header nav {
+    display: none;
+}
+
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 27%, 19%);
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+main {
+    text-align: center;
+}
+
+.text {
+    color: hsl(232, 10%, 55%);
+    margin-bottom: 32px;
+}
+
+.testimonials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.information-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+}
+
+.information-item-content {
+    max-width: 85%;
+}
+
+.information-item a {
+    font-family: 'Fraunces', serif;
+}
+
+.information-item a:visited,
+.information-item a:link, 
+.information-item a:active,
+.information-item a:hover { 
+    display: inline-block;
+    position: relative;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.transform-brand-item a::before {
+    position: absolute;
+    content: "";
+    background-color: hsl(51, 100%, 49%, 0.3);
+    height: 6px;
+    width: 100%;
+    z-index: -1;
+    bottom: 1px;
+}
+
+.right-audience-item a::before {
+    position: absolute;
+    content: "";
+    background-color: hsl(7, 99%, 70%, 0.3);
+    height: 6px;
+    width: 100%;
+    z-index: -1;
+    bottom: 1px;
+}
+
+.information-image-container {
+    position: relative;
+}
+
+.information-image-text {
+    position: absolute;
+    bottom: 0;
+    margin: 0 16px;
+}
+
+.information-image-text h3 {
+    margin-bottom: 32px;
+}
+
+.information-image-text p {
+    margin-bottom: 48px;
+}
+
+.image-text-graphic-design {
+    color: hsl(167, 40%, 24%);
+}
+
+.image-text-photography {
+    color: hsl(198, 62%, 26%);
+}
+
+.information-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin: 48px 16px;
+}
+
+.testimonials .header-text {
+    color: hsl(232, 10%, 55%);
+}
+
+.testimonial-image {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.testimonial-author-position {
+    color: hsl(210, 4%, 67%);
+    font-size: 0.8rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.gallery-item {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: hsl(168, 34%, 41%);
+    color: hsl(167, 40%, 24%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.footer-logo {
+    margin-top: 32px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 48px;
+    color: hsl(167, 40%, 24%);
+}
+
+.footer-social {
+    padding: 16px 0;
+    display: flex;
+    gap: 32px;
+}
+
+.footer-links a:link, 
+.footer-links a:visited,
+.footer-links a:active,
+.footer-links a:hover {
+    text-decoration: none;
+    color:  hsl(167, 43%, 30%);
+}
+
+.footer-links a:hover {
+    color:  hsl(0, 0%, 100%);
+}
+
+svg.footer-icon:hover path {
+    fill: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px)  {
+    .navigation-menu {
+        display: none;
+        position: absolute;
+        justify-content: space-around;
+        top: 64px;
+        right: 16px;
+        background-color: hsl(0, 0%, 100%);
+        width:300px;
+        height: 300px;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .navigation-menu::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -19px;
+        border-right: 10px solid hsl(0, 0%, 100%);
+        border-bottom: 10px solid hsl(0, 0%, 100%);
+        border-left: 10px solid transparent;
+        border-top: 10px solid transparent;
+    }
+
+    .navigation-menu a:link, 
+    .navigation-menu a:visited,
+    .navigation-menu a:active,
+    .navigation-menu a:hover {
+        color: hsl(232, 10%, 55%);
+    }
+}
+
+@media screen and (min-width: 768px)  {
+    .menu-icon {
+        display: none;
+    }
+
+    header {
+        height: 600px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .header-image {
+        display: block;
+        width: auto;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navigation {
+        margin-top: 16px;
+        gap: 70px;
+    }
+
+    .navigation-logo {
+        margin-left: 32px;
+    }
+
+    .navigation-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        margin-right: 32px;
+    }
+
+    a.navigation-contact:link, 
+    a.navigation-contact:visited,
+    a.navigation-contact:active {
+        color: #000;
+        text-transform: uppercase;
+    }
+
+    .navigation-contact {
+        background-color: hsl(0, 0%, 100%);   
+    }
+
+    a.navigation-contact:hover {
+        background-color: hsl(0, 0%, 100%, 0.3);
+        color: hsl(0, 0%, 100%);   
+    }
+
+    .information {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .information-item {
+        height: auto;
+    }
+
+    .transform-brand-item {
+        grid-area: 1 / 1 / 2 / 2; 
+    }
+
+    .testimonials {
+        width: 80%;
+        margin: 32px auto;
+    }
+
+    .testimonials-list {
+        flex-direction: row;
+    }
+
+    .information-item-content {
+        max-width: 720px;
+        width: 80%;
+        text-align: left;
+    }
+
+    .information-image-text {
+        max-width: 720px;
+        width: 80%;
+        left: 50%;
+        margin: 0;
+        transform: translate(-50%, 0);
+    }
+
+    .gallery {
+        display: flex;
+    }
+}
